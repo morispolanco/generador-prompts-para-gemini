@@ -18,6 +18,8 @@ Actúa como un tutor de programación amigable. Soy principiante. Ayúdame a cre
 **Mi idea es:**
 {problema}
 
+{knowledge_base}
+
 **Algunos detalles:**
 - **Público:** {audiencia}
 - **Quiero que sea para:** {plataforma}
@@ -38,6 +40,8 @@ Actúa como un colega desarrollador. Quiero construir un prototipo rápido.
 **Problema a resolver:**
 {problema}
 
+{knowledge_base}
+
 **Contexto:**
 - **Audiencia:** {audiencia}
 - **Plataforma:** {plataforma}
@@ -55,6 +59,9 @@ ${SHARED_RULES}
 Actúa como un arquitecto de software. Dame una base de código sólida para el siguiente problema.
 
 **Problema:** {problema}
+
+{knowledge_base}
+
 **Audiencia:** {audiencia}
 **Plataforma:** {plataforma}
 **Stack:** {lenguaje} / React / Tailwind
@@ -74,6 +81,8 @@ Actúa como un mentor de desarrollo web. Estoy aprendiendo a estructurar aplicac
 
 **Problema a resolver:**
 {problema}
+
+{knowledge_base}
 
 **Contexto:**
 - **Audiencia objetivo:** {audiencia}
@@ -96,6 +105,8 @@ Actúa como un ingeniero de frontend senior revisando mi plan de proyecto.
 **Requerimiento:**
 {problema}
 
+{knowledge_base}
+
 **Información del proyecto:**
 - **Usuario final:** {audiencia}
 - **Entorno:** {plataforma}
@@ -117,6 +128,8 @@ Actúa como un Lead Engineer. Vas a definir el boilerplate para una nueva featur
 
 **Feature a desarrollar:**
 {problema}
+
+{knowledge_base}
 
 **Contexto:**
 - **Audiencia:** {audiencia}
@@ -142,6 +155,8 @@ Actúa como un instructor de un bootcamp de programación. Mi proyecto final es 
 **Descripción del proyecto:**
 {problema}
 
+{knowledge_base}
+
 **Detalles:**
 - **Usuarios:** {audiencia}
 - **Plataforma:** {plataforma}
@@ -164,6 +179,8 @@ Actúa como mi par en una sesión de pair programming. Vamos a montar la arquite
 **Problema de negocio:**
 {problema}
 
+{knowledge_base}
+
 **Requerimientos:**
 - **Audiencia:** {audiencia}
 - **Plataforma:** {plataforma}
@@ -185,6 +202,8 @@ Actúa como un Ingeniero Principal de Frontend de React con profunda experiencia
 
 **Problema a resolver:**
 {problema}
+
+{knowledge_base}
 
 **Contexto y Restricciones:**
 - **Audiencia objetivo:** {audiencia}

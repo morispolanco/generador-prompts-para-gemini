@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback } from 'react';
 import { FormData, TemplateLevel, TechnicalLevel } from './types';
 import { PROMPT_TEMPLATES } from './constants';
@@ -12,6 +13,20 @@ const generatePromptFromData = (formData: FormData): string => {
     template = template.replace('{plataforma}', formData.platform || '[describir plataforma]');
     template = template.replace('{lenguaje}', formData.language || '[describir lenguaje]');
     template = template.replace('{restricciones}', formData.constraints || '[ninguna]');
+
+    const knowledgeBaseContent = formData.knowledgeBase?.trim();
+    if (knowledgeBaseContent) {
+        const knowledgeBaseSection = `
+**Base de Conocimiento Adicional:**
+\`\`\`
+${knowledgeBaseContent}
+\`\`\`
+`;
+        template = template.replace('{knowledge_base}', knowledgeBaseSection);
+    } else {
+        template = template.replace('{knowledge_base}', '');
+    }
+
     return template.trim();
 };
 
@@ -24,6 +39,7 @@ const App: React.FC = () => {
     constraints: 'Debe ser responsive. Usar recharts para un dashboard de estadísticas de uso de aulas. No requiere backend real, simular las llamadas a API con datos de ejemplo.',
     templateLevel: TemplateLevel.Avanzada,
     technicalLevel: TechnicalLevel.Experto,
+    knowledgeBase: '',
   });
 
   const [displayedPrompt, setDisplayedPrompt] = useState(() => generatePromptFromData(formData));

@@ -19,4 +19,5 @@ export interface FormData {
   constraints: string;
   templateLevel: TemplateLevel;
   technicalLevel: TechnicalLevel;
+  knowledgeBase: string;
 }

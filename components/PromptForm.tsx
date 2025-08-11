@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FormData, TemplateLevel, TechnicalLevel } from '../types';
 import Tabs from './Tabs';
@@ -52,7 +53,22 @@ const PromptForm: React.FC<PromptFormProps> = ({ formData, onFormChange, onGener
       </div>
 
       <div className="bg-slate-850 p-6 rounded-lg shadow-lg">
-        <h2 className="text-xl font-semibold text-white mb-4">2. Define el Contexto</h2>
+        <h2 className="text-xl font-semibold text-white mb-4">2. Base de Conocimiento (Opcional)</h2>
+         <p className="text-sm text-slate-400 mb-4">
+          Pega aquí texto (documentación, ejemplos de código, etc.) que la IA deba usar como referencia principal.
+        </p>
+        <Label htmlFor="knowledgeBase">Contenido de la base de conocimiento</Label>
+        <TextArea
+          id="knowledgeBase"
+          value={formData.knowledgeBase}
+          onChange={(e) => onFormChange('knowledgeBase', e.target.value)}
+          rows={8}
+          placeholder="Ej: Pega aquí la documentación de una API, reglas de negocio específicas, o ejemplos de código relevantes."
+        />
+      </div>
+
+      <div className="bg-slate-850 p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-semibold text-white mb-4">3. Define el Contexto</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="audience">Audiencia Objetivo</Label>
@@ -74,7 +90,7 @@ const PromptForm: React.FC<PromptFormProps> = ({ formData, onFormChange, onGener
       </div>
 
       <div className="bg-slate-850 p-6 rounded-lg shadow-lg">
-        <h2 className="text-xl font-semibold text-white mb-4">3. Ajusta la Complejidad del Prompt</h2>
+        <h2 className="text-xl font-semibold text-white mb-4">4. Ajusta la Complejidad del Prompt</h2>
         <div>
           <Label htmlFor="templateLevel">Nivel de Detalle de la Plantilla</Label>
           <Tabs
