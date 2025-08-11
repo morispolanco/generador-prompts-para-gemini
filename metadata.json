@@ -1,0 +1,6 @@
+{
+  "name": "Generador de Prompts para Gemini",
+  "description": "Una aplicación para generar prompts optimizados para crear aplicaciones web con la API de Google Gemini, basado en la descripción de un problema y requisitos técnicos.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
